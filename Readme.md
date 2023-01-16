@@ -10,6 +10,8 @@ The script also displays a toast notification to the user when there's 2 minutes
 
 ## Installation
 
+Form the **Code** menu on the GitHub page, select **Download ZIP**.
+
 Unzip the files to the folder **C:\HTA-TimeRemaining**. If you wish to use a different folder, you will have to edit the scheduled task XML files to the correct path.
 
 **Note**: The folder cannot have any spaces in its name. This is a limitation of the **Elevate.exe** program needed to elevate and wait for the AddTime script.
