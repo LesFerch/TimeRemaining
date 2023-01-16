@@ -16,7 +16,7 @@ Unzip the files to the folder **C:\HTA-TimeRemaining**. If you wish to use a dif
 
 **Note**: The folder cannot have any spaces in its name. This is a limitation of the **Elevate.exe** program needed to elevate and wait for the AddTime script.
 
-Edit the permissions of the folder so that standard users have read-only access.
+Edit the permissions of the folder so that standard users have **read-only** access.
 
 Open Task Scheduler, click **Import Task...** and select the file **TimeRemaining.xml**. Repeat for the file  **TimeRemaining-Maintain.xml**.
 
