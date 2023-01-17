@@ -14,7 +14,7 @@ From the **Code** menu on the GitHub page, select **Download ZIP**.
 
 Unzip the files to the folder **C:\HTA-TimeRemaining**. If you wish to use a different folder, you will have to edit the scheduled task XML files to the correct path.
 
-**Note**: The folder cannot have any spaces in its name. This is a limitation of the **Elevate.exe** program needed to elevate and wait for the AddTime script.
+**Note**: The target folder cannot have any spaces in its path (e.g. it won't work inside a subfolder of "Program Files"). This is a limitation of the **Elevate.exe** program needed to elevate and wait for the AddTime script.
 
 Edit the permissions of the folder so that standard users have **read-only** access.
 
