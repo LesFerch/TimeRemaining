@@ -17,6 +17,7 @@
 >
 <script language="VBScript">
 Const DefaultWait = 30 'minutes
+Const AddTimeStart = 120 'seconds
 Const WarningTime = 120 'seconds
 
 Set oWSH = CreateObject("Wscript.Shell")
@@ -29,7 +30,7 @@ oWSH.CurrentDirectory = MyFolder
 AddTimeHTA = MyFolder & "\AddTime.hta"
 logoutcmd = "Shutdown.exe -l -f"
 Scale = GetScale()
-w = 300 * Scale: h = 150 * Scale
+w = 300 * Scale: h = 110 * Scale
 Window.ResizeTo w, h
 Window.MoveTo (screen.availWidth - w)/2, (screen.availHeight - h)/2
 Paused = False
@@ -73,6 +74,10 @@ End Function
 
 Sub UpdateCountdown
   If Not Paused Then
+    If TimeLeftInSeconds=AddTimeStart Then
+      Window.ResizeTo w, 150 * Scale
+      AddTimeButton.Style.Display = "inline"
+    End If
     Hours = CInt(TimeLeftInSeconds \ 3600)
     Minutes = CInt((TimeLeftInSeconds Mod 3600) \ 60)
     Seconds = TimeLeftInSeconds Mod 60
@@ -116,13 +121,13 @@ End Sub
 body {background-color:black; font-family:Segoe UI; font-size:11pt}
 h1 {color:red}
 .timerDiv {text-align:center}
-.timerButtons {width:6em}
+#AddTimeButton {width:6em; display:none}
 </style>
 </head>
 <body>
   <div class=timerDiv>
     <h1 id=CountDown></h1>
-    <input class=timerButtons type=button value='Add Time' OnClick=AddTime()>
+    <input id=AddTimeButton type=button value='Add Time' OnClick=AddTime()>
   </div>
 </body>
 </html>
