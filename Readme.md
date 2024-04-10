@@ -1,5 +1,7 @@
 # TimeRemaining
 
+[![image](https://github.com/LesFerch/WinSetView/assets/79026235/0188480f-ca53-45d5-b9ff-daafff32869e)Download the zip file](https://github.com/LesFerch/TimeRemaining/archive/refs/heads/main.zip)
+
 This is a package that provides an on-screen countdown of time remaining before a forced logout.
 
 The execution is set up via two scheduled tasks, one running in the user context that provides the display, and one running in the SYSTEM context that will restore the countdown if the user kills the display task.
