@@ -22,6 +22,9 @@ Open Task Scheduler, click **Import Task...** and select the file **TimeRemainin
 
 That's it! The scripts will run on next login.
 
+\
+[![image](https://github.com/LesFerch/WinSetView/assets/79026235/63b7acbc-36ef-4578-b96a-d0b7ea0cba3a)](https://github.com/LesFerch/TimeRemaining)
+
 
 **Note**: The tasks are set to run the scripts on login. Since **TimeRemaining.hta** is run in the user context, it automatically closes when the user logs out. However the **Maintain.vbs** script runs as SYSTEM, so it detects when the user logs out and closes itself.
 
